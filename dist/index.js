@@ -3,12 +3,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SnapDB = void 0;
+exports.BoltDB = void 0;
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 const events_1 = require("events");
 const crypto_1 = __importDefault(require("crypto"));
-class SnapDB extends events_1.EventEmitter {
+class BoltDB extends events_1.EventEmitter {
     constructor(options = {}) {
         super();
         this._cache = {};
@@ -300,4 +300,4 @@ class SnapDB extends events_1.EventEmitter {
         }
     }
 }
-exports.SnapDB = SnapDB;
+exports.BoltDB = BoltDB;

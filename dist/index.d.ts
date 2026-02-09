@@ -1,5 +1,5 @@
 import { EventEmitter } from 'events';
-interface SnapDBOptions {
+interface BoltDBOptions {
     /**
      * File path for the database. generic 'database.json' by default.
      */
@@ -19,13 +19,13 @@ interface SnapDBOptions {
      */
     debug?: boolean;
 }
-export declare class SnapDB extends EventEmitter {
+export declare class BoltDB extends EventEmitter {
     filePath: string;
-    options: SnapDBOptions;
+    options: BoltDBOptions;
     private _cache;
     private _algorithm;
     private _ivLength;
-    constructor(options?: SnapDBOptions | string);
+    constructor(options?: BoltDBOptions | string);
     /**
      * Loads the database from disk into memory.
      */

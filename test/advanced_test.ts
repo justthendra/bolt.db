@@ -1,5 +1,5 @@
 
-import { SnapDB } from '../src/index';
+import { BoltDB } from '../src/index';
 import fs from 'fs';
 import assert from 'assert';
 
@@ -14,7 +14,7 @@ async function runTests() {
     console.log('--- Advanced Features Test ---');
 
     console.log('1. Testing Events...');
-    const db = new SnapDB({ filePath: FILE_PLAIN });
+    const db = new BoltDB({ filePath: FILE_PLAIN });
     
     let eventTriggered = false;
     db.on('set', (key, value) => {
@@ -39,7 +39,7 @@ async function runTests() {
 
     console.log('3. Testing Encryption...');
     const secret = '12345678901234567890123456789012'; // 32 chars
-    const dbEnc = new SnapDB({ filePath: FILE_ENC, encryptionKey: secret });
+    const dbEnc = new BoltDB({ filePath: FILE_ENC, encryptionKey: secret });
     
     dbEnc.set('secretDetails', { plan: 'world_domination' });
     

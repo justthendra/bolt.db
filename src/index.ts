@@ -4,7 +4,7 @@ import path from 'path';
 import { EventEmitter } from 'events';
 import crypto, { BinaryLike, CipherKey } from 'crypto';
 
-interface SnapDBOptions {
+interface BoltDBOptions {
     /**
      * File path for the database. generic 'database.json' by default.
      */
@@ -25,14 +25,14 @@ interface SnapDBOptions {
     debug?: boolean;
 }
 
-export class SnapDB extends EventEmitter {
+export class BoltDB extends EventEmitter {
     public filePath: string;
-    public options: SnapDBOptions;
+    public options: BoltDBOptions;
     private _cache: any = {};
     private _algorithm = 'aes-256-cbc';
     private _ivLength = 16;
 
-    constructor(options: SnapDBOptions | string = {}) {
+    constructor(options: BoltDBOptions | string = {}) {
         super();
         
         if (typeof options === 'string') {

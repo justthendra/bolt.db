@@ -1,5 +1,5 @@
 {
-  "name": "snap.db",
+  "name": "bolt.db",
   "version": "1.0.0",
   "description": "A simple, robust, and synchronous JSON-based key-value database for Node.js.",
   "main": "dist/index.js",
@@ -15,6 +15,7 @@
     "json",
     "store",
     "key-value",
+    "quick.db",
     "snap.db"
   ],
   "author": "Thendra",
@@ -24,11 +25,18 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
   },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "undici-types": "^7.16.0"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/justthendra/snap.db.git"
+    "url": "git+https://github.com/justthendra/bolt.db.git"
   },
   "bugs": {
-    "url": "https://github.com/justthendra/snap.db/issues"
+    "url": "https://github.com/justthendra/bolt.db/issues"
   },
+  "homepage": "https://github.com/justthendra/bolt.db#readme"
 }
