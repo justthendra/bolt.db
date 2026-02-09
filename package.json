@@ -1,0 +1,28 @@
+{
+  "name": "snap.db",
+  "version": "1.0.0",
+  "description": "A simple, robust, and synchronous JSON-based key-value database for Node.js.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "ts-node test/comprehensive_test.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "db",
+    "database",
+    "json",
+    "store",
+    "key-value",
+    "quick.db",
+    "snap.db"
+  ],
+  "author": "Thendra",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
