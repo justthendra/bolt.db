@@ -1,5 +1,5 @@
 import { EventEmitter } from 'events';
-interface BoltDBOptions {
+interface LiteDBOptions {
     /**
      * File path for the database. generic 'database.json' by default.
      */
@@ -19,13 +19,13 @@ interface BoltDBOptions {
      */
     debug?: boolean;
 }
-export declare class BoltDB extends EventEmitter {
+export declare class LiteDB extends EventEmitter {
     filePath: string;
-    options: BoltDBOptions;
+    options: LiteDBOptions;
     private _cache;
     private _algorithm;
     private _ivLength;
-    constructor(options?: BoltDBOptions | string);
+    constructor(options?: LiteDBOptions | string);
     /**
      * Loads the database from disk into memory.
      */

@@ -4,7 +4,7 @@ import path from 'path';
 import { EventEmitter } from 'events';
 import crypto, { BinaryLike, CipherKey } from 'crypto';
 
-interface BoltDBOptions {
+interface LiteDBOptions {
     /**
      * File path for the database. generic 'database.json' by default.
      */
@@ -25,14 +25,14 @@ interface BoltDBOptions {
     debug?: boolean;
 }
 
-export class BoltDB extends EventEmitter {
+export class LiteDB extends EventEmitter {
     public filePath: string;
-    public options: BoltDBOptions;
+    public options: LiteDBOptions;
     private _cache: any = {};
     private _algorithm = 'aes-256-cbc';
     private _ivLength = 16;
 
-    constructor(options: BoltDBOptions | string = {}) {
+    constructor(options: LiteDBOptions | string = {}) {
         super();
         
         if (typeof options === 'string') {

@@ -1,5 +1,5 @@
 
-# bolt.db
+# lite.db
 
 A simple, robust, and synchronous JSON-based key-value database for Node.js.
 Perfect for Discord bots and small projects where you need persistent storage without the hassle of setting up a database server.
@@ -14,19 +14,19 @@ Perfect for Discord bots and small projects where you need persistent storage wi
 ## Installation
 
 ```bash
-npm install bolt.db
+npm install lite.db
 ```
 
 ## Usage
 
 ```javascript
-const { BoltDB } = require('bolt.db');
+const { LiteDB } = require('lite.db');
 
 // Initialize the database (creates 'database.json' by default)
-const db = new BoltDB();
+const db = new LiteDB();
 
 // Or specify a file path
-// const db = new BoltDB('my-db.json');
+// const db = new LiteDB('my-db.json');
 
 // --- Basic Operations ---
 
@@ -75,7 +75,7 @@ db.clear();
 
 ## Professional Features 🚀
 
-`bolt.db` is now equipped with high-performance features suitable for production environments.
+`LİTE.db` is now equipped with high-performance features suitable for production environments.
 
 ### ⚡ In-Memory Caching
 All data is cached in memory for **instant** read speeds (`O(1)`). Writes are synchronous and atomic to ensure data safety.
@@ -84,7 +84,7 @@ All data is cached in memory for **instant** read speeds (`O(1)`). Writes are sy
 Secure your data at rest with AES-256-CBC encryption.
 
 ```javascript
-const db = new BoltDB({ 
+const db = new LiteDB({ 
     filePath: 'secure.db', 
     encryptionKey: '12345678901234567890123456789012' // Must be 32 chars
 });
@@ -122,7 +122,7 @@ db.backup('backup_date.json');
 
 ## API
 
-### `new SnapDB(options?)`
+### `new LiteDB(options?)`
 - `options` (object | string): Configuration object or file path string.
   - `filePath` (string): Path to JSON file.
   - `encryptionKey` (string): 32-char key for encryption.
@@ -145,4 +145,3 @@ db.backup('backup_date.json');
 ## License
 
 MIT
-
