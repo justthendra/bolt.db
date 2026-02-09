@@ -4,7 +4,7 @@ import path from 'path';
 import { EventEmitter } from 'events';
 import crypto, { BinaryLike, CipherKey } from 'crypto';
 
-interface LiteDBOptions {
+interface PureDBOptions {
     /**
      * File path for the database. generic 'database.json' by default.
      */
@@ -25,14 +25,14 @@ interface LiteDBOptions {
     debug?: boolean;
 }
 
-export class LiteDB extends EventEmitter {
+export class PureDB extends EventEmitter {
     public filePath: string;
-    public options: LiteDBOptions;
+    public options: PureDBOptions;
     private _cache: any = {};
     private _algorithm = 'aes-256-cbc';
     private _ivLength = 16;
 
-    constructor(options: LiteDBOptions | string = {}) {
+    constructor(options: PureDBOptions | string = {}) {
         super();
         
         if (typeof options === 'string') {

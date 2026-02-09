@@ -1,5 +1,5 @@
 
-# lite.db
+# pure.db
 
 A simple, robust, and synchronous JSON-based key-value database for Node.js.
 Perfect for Discord bots and small projects where you need persistent storage without the hassle of setting up a database server.
@@ -14,19 +14,19 @@ Perfect for Discord bots and small projects where you need persistent storage wi
 ## Installation
 
 ```bash
-npm install lite.db
+npm install pure.db
 ```
 
 ## Usage
 
 ```javascript
-const { LiteDB } = require('lite.db');
+const { PureDB } = require('pure.db');
 
 // Initialize the database (creates 'database.json' by default)
-const db = new LiteDB();
+const db = new PureDB();
 
 // Or specify a file path
-// const db = new LiteDB('my-db.json');
+// const db = new PureDB('my-db.json');
 
 // --- Basic Operations ---
 
@@ -75,7 +75,7 @@ db.clear();
 
 ## Professional Features 🚀
 
-`LİTE.db` is now equipped with high-performance features suitable for production environments.
+`pure.db` is now equipped with high-performance features suitable for production environments.
 
 ### ⚡ In-Memory Caching
 All data is cached in memory for **instant** read speeds (`O(1)`). Writes are synchronous and atomic to ensure data safety.
@@ -84,7 +84,7 @@ All data is cached in memory for **instant** read speeds (`O(1)`). Writes are sy
 Secure your data at rest with AES-256-CBC encryption.
 
 ```javascript
-const db = new LiteDB({ 
+const db = new PureDB({ 
     filePath: 'secure.db', 
     encryptionKey: '12345678901234567890123456789012' // Must be 32 chars
 });
@@ -122,7 +122,7 @@ db.backup('backup_date.json');
 
 ## API
 
-### `new LiteDB(options?)`
+### `new PureDB(options?)`
 - `options` (object | string): Configuration object or file path string.
   - `filePath` (string): Path to JSON file.
   - `encryptionKey` (string): 32-char key for encryption.

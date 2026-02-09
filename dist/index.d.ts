@@ -1,5 +1,5 @@
 import { EventEmitter } from 'events';
-interface LiteDBOptions {
+interface PureDBOptions {
     /**
      * File path for the database. generic 'database.json' by default.
      */
@@ -19,13 +19,13 @@ interface LiteDBOptions {
      */
     debug?: boolean;
 }
-export declare class LiteDB extends EventEmitter {
+export declare class PureDB extends EventEmitter {
     filePath: string;
-    options: LiteDBOptions;
+    options: PureDBOptions;
     private _cache;
     private _algorithm;
     private _ivLength;
-    constructor(options?: LiteDBOptions | string);
+    constructor(options?: PureDBOptions | string);
     /**
      * Loads the database from disk into memory.
      */

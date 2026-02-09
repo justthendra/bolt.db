@@ -1,5 +1,5 @@
 {
-  "name": "lite.db",
+  "name": "pure.db",
   "version": "1.0.0",
   "description": "A simple, robust, and synchronous JSON-based key-value database for Node.js.",
   "main": "dist/index.js",
@@ -33,10 +33,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/justthendra/lite.db.git"
+    "url": "git+https://github.com/justthendra/pure.db.git"
   },
   "bugs": {
-    "url": "https://github.com/justthendra/lite.db/issues"
+    "url": "https://github.com/justthendra/pure.db/issues"
   },
-  "homepage": "https://github.com/justthendra/lite.db#readme"
+  "homepage": "https://github.com/justthendra/pure.db#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }
